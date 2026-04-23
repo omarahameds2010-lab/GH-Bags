@@ -966,7 +966,7 @@ animateCursor();
  
 // ─── PRODUCTS DATA ───
 const products = [
-  { name: "Classic Black Chain Bag", price: "EGP 850", tag: "bestseller", emoji: "👜" },
+  { name: "Classic Black Chain Bag", price: "EGP 850", tag: "bestseller", image: "images/bag1.jpg" },
   { name: "Gold Stripe Evening Bag", price: "EGP 950", tag: "new", emoji: "✨" },
   { name: "Black & White Geometric", price: "EGP 800", tag: "trending", emoji: "🖤" },
   { name: "Floral Crochet Bag", price: "EGP 750", tag: "handmade", emoji: "🌸" },
@@ -978,12 +978,12 @@ const grid = document.getElementById('productsGrid');
 products.forEach(p => {
   grid.innerHTML += `
     <div class="product-card" onclick="openModal('${p.name}','${p.price}')">
-      <div class="product-img">
-        <span>${p.emoji}</span>
-        <div class="product-overlay">
-          <button class="product-quick-order">طلب سريع ✦</button>
-        </div>
-      </div>
+     <div class="product-img">
+  <img src="${p.image}" alt="${p.name}">
+  <div class="product-overlay">
+    <button class="product-quick-order">طلب سريع ✦</button>
+  </div>
+</div>
       <div class="product-info">
         <div class="product-name">${p.name}</div>
         <div class="product-price">${p.price}</div>
